@@ -1,0 +1,109 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0055ff;
+  --color-secondary: #f0f0f0;
+  --color-header: #e0e0e0;
+  --transition-speed: 0.3s;
+}
+
+[data-tema="oscuro"] {
+  --color-bg: #121212;
+  --color-text: #f5f5f5;
+  --color-primary: #90caf9;
+  --color-secondary: #1e1e1e;
+  --color-header: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+header {
+  background-color: var(--color-header);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+  transition: color var(--transition-speed);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+#modoOscuro {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color var(--transition-speed);
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+article {
+  background-color: var(--color-secondary);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed);
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-header);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: block;
+}

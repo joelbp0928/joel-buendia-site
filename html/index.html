@@ -1,173 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Página de Presentación</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <script>
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle("dark");
-      }
-    </script>
-  </head>
-  <body class="flex bg-blue-900 text-white dark:bg-gray-900 dark:text-gray-300">
-    <!-- Navbar -->
-    <nav
-      class="fixed top-0 left-0 h-full w-64 bg-blue-800 dark:bg-gray-800 shadow-lg flex flex-col justify-between p-4"
-    >
-      <ul class="space-y-4">
-        <li>
-          <a
-            href="#sobre-mi"
-            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
-            >Sobre mí</a
-          >
-        </li>
-        <li>
-          <a
-            href="#habilidades"
-            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
-            >Habilidades</a
-          >
-        </li>
-        <li>
-          <a
-            href="#proyectos"
-            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
-            >Proyectos</a
-          >
-        </li>
-        <li>
-          <a
-            href="#contacto"
-            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
-            >Contacto</a
-          >
-        </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentación Profesional - Enrique Joel Buendía</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Enrique Joel Buendia</h1>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><button id="modoOscuro">🌓</button></li>
       </ul>
-      <button
-        class="mt-5 bg-yellow-500 text-gray-900 py-2 px-4 rounded hover:bg-yellow-400 dark:bg-yellow-400 dark:text-gray-900"
-        onclick="toggleDarkMode()"
-      >
-        Dark
-      </button>
     </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="ml-64 p-10 space-y-10">
-      <!-- Header -->
-      <header
-        class="text-center bg-blue-800 dark:bg-gray-800 p-6 rounded shadow-lg"
-      >
-        <h1 class="text-4xl font-bold">Enrique Joel Buendia</h1>
-        <p class="text-xl mt-2">Desarrollador Web | Emprendedor</p>
-      </header>
+  <section id="bienvenida">
+    <h2>¡Hola! Soy desarrollador full-stack en formación</h2>
+    <p>Apasionado por resolver problemas, optimizar procesos y colaborar en equipo.</p>
+  </section>
 
-      <!-- Sobre mí -->
-      <section
-        id="sobre-mi"
-        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
-      >
-        <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
-        <p>
-          Soy un desarrollador web apasionado por crear soluciones digitales
-          innovadoras. Tengo experiencia en HTML, CSS, JavaScript y frameworks
-          como Node.js.
-        </p>
-      </section>
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Estudiante de Ingeniería en Sistemas Computacionales en el IPN, con formación técnica en computación. Tengo experiencia desarrollando sistemas web para negocios reales y he liderado proyectos tanto académicos como personales. Además, soy fundador del negocio Montoneras Donas.</p>
+    <p>Stack técnico: JavaScript, HTML, CSS, Python, C/C++, PHP, Node.js, Express.js, Bootstrap, MySQL, Firestore, Git/GitHub, Firebase, Azure.</p>
+    <p>Habilidades blandas: trabajo en equipo, liderazgo, resolución de problemas, comunicación efectiva.</p>
+  </section>
 
-      <!-- Habilidades -->
-      <section
-        id="habilidades"
-        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
-      >
-        <h2 class="text-3xl font-bold mb-4">Habilidades</h2>
-        <ul class="flex flex-wrap gap-4">
-          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">HTML</li>
-          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">CSS</li>
-          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
-            JavaScript
-          </li>
-          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
-            Node.js
-          </li>
-          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
-            Trabajo en equipo
-          </li>
-          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
-            Resolución de problemas
-          </li>
-        </ul>
-      </section>
+  <section id="proyectos">
+    <h2>Proyectos Destacados</h2>
+    <article>
+      <h3>Sistema gestor de panaderías</h3>
+      <p>App web para gestión de productos, ventas y recomendaciones automáticas. Integrado con Firebase y Supabase. Desarrollado en equipo bajo Scrum.</p>
+      <a href="https://github.com/joelbp0928/gestor-panaderias" target="_blank">Ver repositorio</a>
+    </article>
 
-      <!-- Proyectos -->
-      <section
-        id="proyectos"
-        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
-      >
-        <h2 class="text-3xl font-bold mb-4">Proyectos</h2>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>
-            <a
-              href="https://github.com/tu-usuario/proyecto-1"
-              target="_blank"
-              class="text-yellow-400 hover:underline"
-              >Sistema para panaderías</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://sistema-de-puntos.web.app/index.html"
-              target="sistema_de_puntos"
-              class="text-yellow-400 hover:underline"
-              >Sitio web de donas</a
-            >
-          </li>
-        </ul>
-      </section>
+    <article>
+      <h3>Sistema de puntos - Montoneras Donas</h3>
+      <p>Plataforma de fidelización con registro de usuarios y control de puntos. Interfaz intuitiva, almacenamiento en tiempo real con Firebase.</p>
+      <a href="https://github.com/joelbp0928/sistema-puntos" target="_blank">Ver repositorio</a>
+    </article>
 
-      <!-- Contacto -->
-      <section
-        id="contacto"
-        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
-      >
-        <h2 class="text-3xl font-bold mb-4">Contacto</h2>
-        <p>
-          Correo:
-          <a
-            href="mailto:tuemail@example.com"
-            class="text-yellow-400 hover:underline"
-            >tuemail@example.com</a
-          >
-        </p>
-        <p>Teléfono: +52 123 456 7890</p>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/tuusuario"
-            target="_blank"
-            class="text-yellow-400 hover:underline"
-            >LinkedIn</a
-          >
-          |
-          <a
-            href="https://github.com/tuusuario"
-            target="_blank"
-            class="text-yellow-400 hover:underline"
-            >GitHub</a
-          >
-        </p>
-      </section>
+    <article>
+      <h3>Gestor de Pizzería</h3>
+      <p>Administración de pedidos y menú. HTML, CSS, Java (JSP), Bootstrap y MySQL.</p>
+    </article>
 
-      <!-- Footer -->
-      <footer
-        class="text-center p-4 bg-blue-800 dark:bg-gray-800 rounded shadow-lg"
-      >
-        <p>&copy; 2024 Enrique Joel Buendia. Todos los derechos reservados.</p>
-      </footer>
-    </main>
-  </body>
+    <article>
+      <h3>Visualizador de algoritmos Greedy</h3>
+      <p>Motor interactivo con animaciones de grafos. HTML, CSS, Bootstrap, JS, MySQL y Cytoscape.</p>
+    </article>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <ul>
+      <li>📞 722 506 9584</li>
+      <li>📧 <a href="mailto:joel_enrik@hotmail.com">joel_enrik@hotmail.com</a></li>
+      <li>📍 Miguel Hidalgo, CDMX</li>
+      <li>🌐 <a href="https://github.com/joelbp0928" target="_blank">GitHub</a></li>
+      <li>💼 <a href="https://www.linkedin.com/in/joel-buendia-36484b2a2/" target="_blank">LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Enrique Joel Buendía</p>
+  </footer>
+
+  <script src="../script/script.js"></script>
+</body>
 </html>
