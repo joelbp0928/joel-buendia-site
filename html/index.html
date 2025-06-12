@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Página de Presentación</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+      }
+    </script>
+  </head>
+  <body class="flex bg-blue-900 text-white dark:bg-gray-900 dark:text-gray-300">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 h-full w-64 bg-blue-800 dark:bg-gray-800 shadow-lg flex flex-col justify-between p-4"
+    >
+      <ul class="space-y-4">
+        <li>
+          <a
+            href="#sobre-mi"
+            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
+            >Sobre mí</a
+          >
+        </li>
+        <li>
+          <a
+            href="#habilidades"
+            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
+            >Habilidades</a
+          >
+        </li>
+        <li>
+          <a
+            href="#proyectos"
+            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
+            >Proyectos</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contacto"
+            class="block p-3 rounded hover:bg-blue-700 dark:hover:bg-gray-700"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+      <button
+        class="mt-5 bg-yellow-500 text-gray-900 py-2 px-4 rounded hover:bg-yellow-400 dark:bg-yellow-400 dark:text-gray-900"
+        onclick="toggleDarkMode()"
+      >
+        Dark
+      </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-64 p-10 space-y-10">
+      <!-- Header -->
+      <header
+        class="text-center bg-blue-800 dark:bg-gray-800 p-6 rounded shadow-lg"
+      >
+        <h1 class="text-4xl font-bold">Enrique Joel Buendia</h1>
+        <p class="text-xl mt-2">Desarrollador Web | Emprendedor</p>
+      </header>
+
+      <!-- Sobre mí -->
+      <section
+        id="sobre-mi"
+        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
+      >
+        <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+        <p>
+          Soy un desarrollador web apasionado por crear soluciones digitales
+          innovadoras. Tengo experiencia en HTML, CSS, JavaScript y frameworks
+          como Node.js.
+        </p>
+      </section>
+
+      <!-- Habilidades -->
+      <section
+        id="habilidades"
+        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
+      >
+        <h2 class="text-3xl font-bold mb-4">Habilidades</h2>
+        <ul class="flex flex-wrap gap-4">
+          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">HTML</li>
+          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">CSS</li>
+          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
+            JavaScript
+          </li>
+          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
+            Node.js
+          </li>
+          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
+            Trabajo en equipo
+          </li>
+          <li class="bg-blue-600 dark:bg-gray-600 px-4 py-2 rounded">
+            Resolución de problemas
+          </li>
+        </ul>
+      </section>
+
+      <!-- Proyectos -->
+      <section
+        id="proyectos"
+        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
+      >
+        <h2 class="text-3xl font-bold mb-4">Proyectos</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>
+            <a
+              href="https://github.com/tu-usuario/proyecto-1"
+              target="_blank"
+              class="text-yellow-400 hover:underline"
+              >Sistema para panaderías</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://sistema-de-puntos.web.app/index.html"
+              target="sistema_de_puntos"
+              class="text-yellow-400 hover:underline"
+              >Sitio web de donas</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contacto -->
+      <section
+        id="contacto"
+        class="p-6 bg-blue-700 dark:bg-gray-700 rounded shadow-lg"
+      >
+        <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+        <p>
+          Correo:
+          <a
+            href="mailto:tuemail@example.com"
+            class="text-yellow-400 hover:underline"
+            >tuemail@example.com</a
+          >
+        </p>
+        <p>Teléfono: +52 123 456 7890</p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/tuusuario"
+            target="_blank"
+            class="text-yellow-400 hover:underline"
+            >LinkedIn</a
+          >
+          |
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            class="text-yellow-400 hover:underline"
+            >GitHub</a
+          >
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        class="text-center p-4 bg-blue-800 dark:bg-gray-800 rounded shadow-lg"
+      >
+        <p>&copy; 2024 Enrique Joel Buendia. Todos los derechos reservados.</p>
+      </footer>
+    </main>
+  </body>
+</html>
