@@ -1,89 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.9.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentación Profesional - Enrique Joel Buendia</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <button
+      class="toggle-sidebar"
+      onclick="document.querySelector('nav').classList.toggle('active')"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <main>
+      <section class="hero">
+        <img
+          src="../img/image.png"
+          alt="Foto de Enrique Joel Buendía"
+          class="hero-img"
+        />
+        <h1>Enrique Joel Buendia</h1>
+        <p>
+          Desarrollador full-stack en formación apasionado por la innovación, la
+          tecnología y el crecimiento constante.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="../data/Enrique joel Buendia Peralta cv.pdf"
+            class="btn-primary"
+            download
+          >
+            <i class="fa-solid fa-file-arrow-down"></i> Descargar CV
+          </a>
+          <a href="#contacto" class="btn-secondary">
+            <i class="fa-solid fa-paper-plane"></i> Contáctame
+          </a>
+        </div>
+      </section>
+      <header>
+        <nav>
+          <h1>Enrique Joel Buendia</h1>
+          <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li>
+              <button id="modoOscuro">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      <section id="bienvenida">
+        <h2>¡Hola! Soy desarrollador full-stack en formación</h2>
+        <p>
+          Apasionado por resolver problemas, optimizar procesos y colaborar en
+          equipo.
+        </p>
+      </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+          Estudiante de Ingeniería en Sistemas Computacionales en el IPN, con
+          formación técnica en computación. Tengo experiencia desarrollando
+          sistemas web para negocios reales y he liderado proyectos tanto
+          académicos como personales. Además, soy fundador del negocio
+          Montoneras Donas.
+        </p>
+        <p>
+          Stack técnico: JavaScript, HTML, CSS, Python, C/C++, PHP, Node.js,
+          Express.js, Bootstrap, MySQL, Firestore, Git/GitHub, Firebase, Azure.
+        </p>
+        <p>
+          Habilidades blandas: trabajo en equipo, liderazgo, resolución de
+          problemas, comunicación efectiva.
+        </p>
+      </section>
+
+      <section id="proyectos" class="reveal">
+        <h2>Proyectos Destacados</h2>
+        <article>
+          <h3>Sistema gestor de panaderías</h3>
+          <p>
+            App web para gestión de productos, ventas y recomendaciones
+            automáticas. Integrado con Firebase y Supabase. Desarrollado en
+            equipo bajo Scrum.
+          </p>
+          <a
+            href="https://github.com/joelbp0928/gestor-panaderias"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i> Ver repositorio</a
+          >
+        </article>
+
+        <article>
+          <h3>Sistema de puntos - Montoneras Donas</h3>
+          <p>
+            Plataforma de fidelización con registro de usuarios y control de
+            puntos. Interfaz intuitiva, almacenamiento en tiempo real con
+            Firebase.
+          </p>
+          <a href="https://github.com/joelbp0928/sistema-puntos" target="_blank"
+            ><i class="fa-brands fa-github"></i> Ver repositorio</a
+          >
+        </article>
+
+        <article>
+          <h3>Gestor de Pizzería</h3>
+          <p>
+            Administración de pedidos y menú. HTML, CSS, Java (JSP), Bootstrap y
+            MySQL.
+          </p>
+        </article>
+
+        <article>
+          <h3>Visualizador de algoritmos Greedy</h3>
+          <p>
+            Motor interactivo con animaciones de grafos. HTML, CSS, Bootstrap,
+            JS, MySQL y Cytoscape.
+          </p>
+        </article>
+      </section>
+
+      <section id="contacto" class="reveal">
+        <h2>Contacto</h2>
+        <ul>
+          <li><i class="fa-solid fa-phone"></i>722 506 9584</li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:joel_enrik@hotmail.com"> joel_enrik@hotmail.com</a>
+          </li>
+          <li><i class="fa-solid fa-location-dot"></i> Miguel Hidalgo, CDMX</li>
+          <li>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/joelbp0928" target="_blank"> GitHub</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/joel-buendia-36484b2a2/"
+              target="_blank"
+            >
+              LinkedIn</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="../script/script.js"></script>
   </body>
 </html>
